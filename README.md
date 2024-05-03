@@ -39,5 +39,4 @@ for more details.
 ```
 Just ignore this and run the script again.
 
-In my initial tests my script worked but had 4 warnings. To fix 2 of them, I had to set temperature and top_p to 1 in `...Video-LLaVA\cache_dir\models--LanguageBind--Video-LLaVA-7B\snapshots\aecae02b7dee5c249e096dcb0ce546eb6f811806\generation_config.json`. This file doesn't show up in my file explorer and I only found it with the project folder loaded in [Cursor](https://cursor.sh/). There are other warnings but they don't seem critical.
-
+In my initial tests my script worked but had 4 warnings. To fix 2 of them, I had to set temperature and top_p to 1 in `...Video-LLaVA\cache_dir\models--LanguageBind--Video-LLaVA-7B\snapshots\aecae02b7dee5c249e096dcb0ce546eb6f811806\generation_config.json`. This file doesn't show up in my file explorer and I only found it with the project folder loaded in [Cursor](https://cursor.sh/). There are other warnings but they don't seem critical, though I wlecome any suggestions to fix them.
