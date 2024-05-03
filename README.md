@@ -3,9 +3,9 @@ custom script for Video-LLaVA that can sort videos based on their visual content
 
 This script uses Video-LLaVA to sort videos by repeating the same question for each video, and then moves the videos into directories based on the response.
 
-# WIP, noob dev here and I'm figuring out the install process
-
 I recently made [CLIP-video-sorter](https://github.com/secretlycarl/CLIP-video-sorter) but was unhappy with the results. I found an alternative in [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) so I made this script.
+
+Not the cleanest install process, still figuring out some kinks. The directions here should get you up and running.
 
 # Requirements
 Python >= 3.10
