@@ -42,7 +42,7 @@ load_in_8bit_fp32_cpu_offload=True fix?
 1. Activate the environment and run my script with `python sortscript.py`
 The first time it runs, it will download ~17GB of models.
 
-When trying to run on my system for the first time, after the models are downloaded, I get
+When trying to run on my system for the first time, after the models are downloaded, there is a warning about bitsandbytes and this error
 ``` 
 Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit
 the quantized model. If you want to dispatch the model on the CPU or the disk while keeping
@@ -51,7 +51,7 @@ these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` an
 https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu
 for more details.
 ```
-2. If you get this, just ignore it and run the script again (maybe).
+2. If you get this, just ignore it, close the command window, reopen, activate the environment, and run the script again. Trying to figure out how to deal with this before it happens but no luck yet.
 
 3. It will ask you for a folder path. Copy and paste from the file explorer.
 
