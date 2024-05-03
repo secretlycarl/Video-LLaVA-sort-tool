@@ -1,6 +1,8 @@
 # Video-LLaVA-sort-tool
 custom script for Video-LLaVA that can sort videos based on their visual content
 
+# WIP, noob dev here and I'm figuring out the install process
+
 I recently made [CLIP-video-sorter](https://github.com/secretlycarl/CLIP-video-sorter) but was unhappy with the results. I found an alternative in [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) so I made this script.
 
 # Requirements
