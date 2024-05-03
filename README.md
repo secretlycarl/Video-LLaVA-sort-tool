@@ -28,7 +28,18 @@ pip install decord opencv-python git+https://github.com/facebookresearch/pytorch
 ```
 `pip install -e ".[train]"` and `pip install flash-attn --no-build-isolation` aren't needed just to run inference on a video in the CLI
 
-When trying to run on my system for the first time, I get
+Then copy my `sortscript.py` into the main Video-LLaVA directory
+
+bitsandbytes fix?
+
+load_in_8bit_fp32_cpu_offload=True fix?
+
+# sortscript.py Usage
+Activate the environment and run my script with `python sortscript.py`
+
+The first time it runs, it will download ~17GB of models.
+
+When trying to run on my system for the first time, after the models are downloaded, I get
 ``` 
 Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit
 the quantized model. If you want to dispatch the model on the CPU or the disk while keeping
@@ -37,6 +48,6 @@ these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` an
 https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu
 for more details.
 ```
-Just ignore this and run the script again.
+If you get this, just ignore it and run the script again (maybe).
 
-In my initial tests my script worked but had 4 warnings. To fix 2 of them, I had to set temperature and top_p to 1 in `...Video-LLaVA\cache_dir\models--LanguageBind--Video-LLaVA-7B\snapshots\aecae02b7dee5c249e096dcb0ce546eb6f811806\generation_config.json`. This file doesn't show up in my file explorer and I only found it with the project folder loaded in [Cursor](https://cursor.sh/). There are other warnings but they don't seem critical, though I wlecome any suggestions to fix them.
+In my initial tests my script worked but had 4 warnings. To fix 2 of them, I had to set temperature and top_p to 1 in `...Video-LLaVA\cache_dir\models--LanguageBind--Video-LLaVA-7B\snapshots\aecae02b7dee5c249e096dcb0ce546eb6f811806\generation_config.json`. This file doesn't show up in my file explorer and I only found it with the project folder loaded in [Cursor](https://cursor.sh/) after the script runs for the first time and errors out. I would share the updated file but I don't know how to integrate it from outside the environment. There are other warnings but they don't seem critical, though I wlecome any suggestions to fix them.
