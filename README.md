@@ -16,7 +16,7 @@ Not sure about RAM or VRAM requirements. I have 12GB VRAM and 32GB RAM. I'd assu
 
 ~18GB disk space (mostly the models needed to analyze the videos)
 
-# Install
+# Video-LLaVA Install
 ```
 git clone https://github.com/PKU-YuanGroup/Video-LLaVA
 cd Video-LLaVA
