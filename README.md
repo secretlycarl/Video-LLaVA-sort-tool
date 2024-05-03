@@ -58,7 +58,7 @@ for more details.
 4. It will ask you for your sorting question. My questions are usually something like "What kind of X is this? 1 word answer". X could be landscape, dog, car, etc. A question like "What kind of X does Y have? 1 word answer" is good too.
 I've found that letting the model pick how to describe things works better than giving it options to pick from, like "is this X, Y, or Z?" becuase it can interpret your options incorrectly. 
 
-5. Next the script will loops through the folder of videos and provide its answer to the question for each video.
+5. Next the script will loop through the folder of videos and provide its answer to the question for each video.
 
 6. At the end, the videos are sorted into folders based on the model's answers.
 
