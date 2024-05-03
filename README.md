@@ -1,6 +1,8 @@
 # Video-LLaVA-sort-tool
 custom script for Video-LLaVA that can sort videos based on their visual content
 
+This script uses Video-LLaVA to sort videos by repeating the same question for each video, and then moves the videos into directories based on the response.
+
 # WIP, noob dev here and I'm figuring out the install process
 
 I recently made [CLIP-video-sorter](https://github.com/secretlycarl/CLIP-video-sorter) but was unhappy with the results. I found an alternative in [Video-LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA) so I made this script.
@@ -36,9 +38,8 @@ bitsandbytes fix?
 
 load_in_8bit_fp32_cpu_offload=True fix?
 
-# sortscript.py Usage
-Activate the environment and run my script with `python sortscript.py`
-
+# Usage
+1. Activate the environment and run my script with `python sortscript.py`
 The first time it runs, it will download ~17GB of models.
 
 When trying to run on my system for the first time, after the models are downloaded, I get
@@ -50,6 +51,17 @@ these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` an
 https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu
 for more details.
 ```
-If you get this, just ignore it and run the script again (maybe).
+2. If you get this, just ignore it and run the script again (maybe).
+
+3. It will ask you for a folder path. Copy and paste from the file explorer.
+
+4. It will ask you for your sorting question. My questions are usually something like "What kind of X is this? 1 word answer". X could be landscape, dog, car, etc. A question like "What kind of X does Y have? 1 word answer" is good too.
+I've found that letting the model pick how to describe things works better than giving it options to pick from, like "is this X, Y, or Z?" becuase it can interpret your options incorrectly. 
+
+5. Next the script will loops through the folder of videos and provide its answer to the question for each video.
+
+6. At the end, the videos are sorted into folders based on the model's answers.
+
+7. It will ask for a new folder if you want to sort further.
 
 In my initial tests my script worked but had 4 warnings. To fix 2 of them, I had to set temperature and top_p to 1 in `...Video-LLaVA\cache_dir\models--LanguageBind--Video-LLaVA-7B\snapshots\aecae02b7dee5c249e096dcb0ce546eb6f811806\generation_config.json`. This file doesn't show up in my file explorer and I only found it with the project folder loaded in [Cursor](https://cursor.sh/) after the script runs for the first time and errors out. I would share the updated file but I don't know how to integrate it from outside the environment. There are other warnings but they don't seem critical, though I wlecome any suggestions to fix them.
