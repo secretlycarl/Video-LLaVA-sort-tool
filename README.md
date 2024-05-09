@@ -14,7 +14,7 @@ Pytorch == 2.0.1
 
 [Anaconda](https://docs.anaconda.com/free/anaconda/install/)
 
-CUDA Version >= 11.7 but less than 12.4 (Video-LLaVA requires bitsandbytes, which is not compatible with 12.4. [CUDA swap guide](https://github.com/bycloudai/SwapCudaVersionWindows))
+CUDA Version >= 11.7 but less than 12.4 (Video-LLaVA requires bitsandbytes, which is not compatible with 12.4. ([CUDA swap guide](https://github.com/bycloudai/SwapCudaVersionWindows))
 
 Not sure about RAM or VRAM requirements. I have 12GB VRAM and 32GB RAM. I'd assume at least 8GB and 16GB are needed, respectively.
 
